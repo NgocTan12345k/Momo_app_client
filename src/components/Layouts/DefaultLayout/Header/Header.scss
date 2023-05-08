@@ -1,0 +1,174 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--backgroud-color);
+  z-index: 1;
+  border-bottom: 0.5px solid var(--border-color);
+
+  .navbar {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--backgroud-color);
+    font-weight: 700;
+    .container {
+      justify-content: space-between;
+      .navbar-brand {
+        .navbar-logo {
+          display: flex;
+          padding: 0.1875rem 0;
+          .logo img {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 0.1875rem;
+          }
+
+          .logo__wallet {
+            margin-left: 0.5rem;
+            padding-left: 0.25rem;
+            height: 1.875rem;
+            line-height: 1.875rem;
+            border-left: 1px solid var(--border-color);
+            img {
+              width: 1.875rem;
+              height: 1.875rem;
+            }
+            span {
+              margin-left: 0.5rem;
+              --tw-text-opacity: 1;
+              color: rgb(216 45 139 / var(--tw-text-opacity));
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .navbar-nav {
+        align-items: center;
+        .nav-link {
+          border-top: 1px solid var(--gray-300);
+          color: var(--gray-600);
+          width: 100%;
+        }
+        .dropdown {
+          width: 100%;
+          .dropdown-menu {
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+            // top: 3.5rem;
+
+            .dropdown-item {
+              color: var(--gray-600);
+              border-bottom: 1px solid var(--border-color);
+            }
+            a:hover {
+              background-color: #fef0f6;
+              color: var(--pinkmomo);
+            }
+          }
+          .dropdown-menu.show {
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: var(--gray-100);
+          }
+        }
+      }
+
+      .openNav__footer {
+        background-color: var(--gray-100);
+        font-size: 0.75rem;
+        padding: 20px;
+        border-top: 1px solid var(--border-color);
+        width: 100%;
+        a {
+          text-decoration: none;
+          --tw-text-opacity: 1;
+          color: rgb(82 82 82 / var(--tw-text-opacity));
+        }
+
+        h4 {
+          font-size: 0.75rem;
+        }
+        .footer__link {
+          display: flex;
+        }
+
+        .footer__link a {
+          margin-right: 15px;
+        }
+        .footer__link-item img {
+          width: 130px;
+          height: 40px;
+        }
+        .footer__contact {
+          margin: 20px 0 8px;
+          ul {
+            padding-left: 0;
+            list-style-type: none;
+            li {
+              color: var(--gray-600);
+            }
+          }
+          .footer__contact-link {
+            border: 1px solid var(--gray-300);
+            border-radius: 0.25rem;
+            display: flex;
+            justify-content: space-evenly;
+            height: 45.5px;
+            max-width: 200px;
+            background-color: #fff;
+            align-items: center;
+            .contact-link__img img {
+              width: 28px;
+              height: 28px;
+            }
+          }
+        }
+      }
+      // }
+    }
+  }
+  .container {
+    .nav__user {
+      height: 3rem;
+      .nav__user-item {
+        padding: 0.5rem;
+        line-height: 2rem;
+        .nav {
+          .nav-item {
+            .nav-link {
+              padding-left: 0;
+              color: #222;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper .navbar .container {
+    justify-content: flex-start;
+
+    .navbar-nav .dropdown .dropdown-menu .dropdown-item {
+      border: none;
+    }
+
+    .navbar-nav .dropdown .dropdown-menu.show {
+      display: block;
+      background-color: #fff;
+    }
+
+    .navbar-nav {
+      flex-grow: 1;
+
+      .nav-link {
+        border-top: none;
+      }
+    }
+
+    .openNav__footer {
+      display: none;
+    }
+  }
+}

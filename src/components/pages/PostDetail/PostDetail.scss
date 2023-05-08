@@ -1,0 +1,141 @@
+.postDetail {
+  margin-top: 7.5rem;
+  .slider {
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #222;
+    .slider__wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: auto;
+        height: 80vh;
+      }
+      .arrow {
+        color: #fff;
+        margin: 1rem;
+        cursor: pointer;
+      }
+      .close {
+        cursor: pointer;
+        color: #fff;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+  }
+  .container {
+    .row {
+      .postDetail__figure {
+        .postDetail__figure-share {
+          button:hover {
+            background-color: var(--gray-100);
+          }
+        }
+      }
+      .postDetail__img {
+        img {
+          cursor: pointer;
+        }
+      }
+      .postDetail__content {
+        article {
+          img {
+            width: 100%;
+          }
+          figure + p {
+            display: block;
+            text-align: center;
+          }
+        }
+        .aside__right {
+          position: relative;
+          aside {
+            position: sticky;
+            top: 0;
+            .card {
+              .card-body {
+                padding: 1.5rem 2rem;
+                .card-title {
+                  font-weight: 700;
+                }
+                .card-text {
+                  .donation__info {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .donation__info-item {
+                      .info-item__text {
+                        color: var(--gray-400);
+                      }
+                      .info-item__number {
+                        font-weight: 700;
+                      }
+                    }
+                  }
+                  .donation__btn {
+                    button {
+                      margin-top: 0.5rem;
+                      width: 100%;
+                      background-color: var(--pinkmomo);
+                      border: none;
+                      padding: 0.75rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .postDetail__anotherPosts {
+        .home__content-btn {
+          border-radius: 1.5rem;
+          text-align: center;
+          margin: 2rem auto;
+          button:hover {
+            background-color: #fef0f6;
+          }
+          a {
+            color: var(--pinkmomo);
+            text-decoration: none;
+          }
+        }
+        .home__content-btn button {
+          border-radius: 1.5rem;
+          border: 1px solid var(--pinkmomo);
+          padding: 0.25rem 1.5rem;
+          background-color: #fff;
+          text-decoration: none;
+          color: var(--pinkmomo);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .postDetail .postDetail__img {
+    display: none;
+  }
+
+  .postDetail .postDetail__content .aside__right aside #chuongtrinhdangdienra {
+    display: none;
+  }
+  .postDetail .postDetail__content {
+    article {
+      order: 2;
+    }
+    .aside__right {
+      order: 1;
+    }
+  }
+}

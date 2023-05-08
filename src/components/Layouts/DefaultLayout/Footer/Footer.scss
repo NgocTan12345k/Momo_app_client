@@ -1,0 +1,43 @@
+footer {
+  .scroll__top {
+    .scroll__top-item {
+      cursor: pointer;
+      position: fixed;
+      bottom: 3rem;
+      right: 2rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      background-color: #fff;
+      z-index: 2;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .footer__btn {
+    margin-top: 2.5rem;
+    .footer__btn-item {
+      padding: 0.5rem;
+      height: 4rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      opacity: 1;
+      background-color: #ffeff6;
+      border: 1px solid var(--border-color);
+      button {
+        height: 100%;
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: var(--pinkmomo);
+        color: #fff;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
