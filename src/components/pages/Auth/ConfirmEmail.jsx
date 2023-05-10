@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import verifyEmail from "../../../images/verifyEmail.svg";
 import "./ConfirmEmail.scss";

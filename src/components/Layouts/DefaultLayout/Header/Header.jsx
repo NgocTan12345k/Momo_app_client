@@ -5,7 +5,7 @@ import handle_touch from "../../../../images/handle_touch.png";
 import hand_shake from "../../../../images/hand_shake2.png";
 import logo from "../../../../images/momo_icon.png";
 import momo_wallet from "../../../../images/momo-wallet.jpeg";
-import { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./Header.scss";
 import { BsClockHistory } from "react-icons/bs";
 import { MdLogout, MdOutlineChangeCircle } from "react-icons/md";

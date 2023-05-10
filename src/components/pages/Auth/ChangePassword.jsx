@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import AuthAPI from "../../../API/AuthAPI";
 import { Navigate } from "react-router-dom";
 import {
@@ -111,8 +111,7 @@ const ChangePassword = () => {
                   {...register("newPassword", {
                     required: "New Password is required!",
                     pattern: {
-                      value:
-                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                      value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                       message:
                         "Password require minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!",
                     },
@@ -138,8 +137,7 @@ const ChangePassword = () => {
                   {...register("confirmNewPassword", {
                     required: "Confirm New Password is required!",
                     pattern: {
-                      value:
-                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                      value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                       message:
                         "Password require minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!",
                     },

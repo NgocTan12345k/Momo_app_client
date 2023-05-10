@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { useState } from "react";
@@ -65,7 +66,7 @@ const ForgotPassword = () => {
               )}
             />
             {errors.email && (
-              <p style={{ color: "red" }}>{errors?.email.message}</p>
+              <p style={{ color: "red" }}>{errors.email.message}</p>
             )}
             {isErrorEmail && <p style={{ color: "red" }}>Wrong Email!</p>}
             <label className="form-label" htmlFor="typeEmail">

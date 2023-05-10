@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 // import Home from "./components/pages/Home/Home";
 import { privateRoutes, publicRoutes } from "./routes/Routes";
 import { DefaultLayout } from "./components/Layouts/Layout";
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 function App() {
   const ProtectRoute = ({ children }) => {

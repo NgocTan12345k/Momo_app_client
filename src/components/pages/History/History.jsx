@@ -1,3 +1,4 @@
+import React from "react";
 import "./History.scss";
 import Table from "react-bootstrap/Table";
 import DonationAPI from "../../../API/DonationAPI";

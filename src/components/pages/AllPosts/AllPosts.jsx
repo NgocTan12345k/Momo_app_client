@@ -1,3 +1,4 @@
+import React from "react";
 import "./AllPosts.scss";
 import CardComponent from "../Card/CardComponent";
 import { useState, useEffect } from "react";

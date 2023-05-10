@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import AuthAPI from "../../../API/AuthAPI";
 import { Navigate } from "react-router-dom";
 import {
@@ -89,7 +89,7 @@ const Login = () => {
                 />
                 {errors.email && (
                   <p style={{ color: "red", marginLeft: "0.5rem" }}>
-                    {errors?.email.message}
+                    {errors.email.message}
                   </p>
                 )}
                 {isErrorEmail && <p style={{ color: "red" }}>Wrong Email</p>}
@@ -112,7 +112,7 @@ const Login = () => {
                 />
                 {errors.password && (
                   <p style={{ color: "red", marginLeft: "0.5rem" }}>
-                    {errors?.password.message}
+                    {errors.password.message}
                   </p>
                 )}
                 {isErrorPassword && (

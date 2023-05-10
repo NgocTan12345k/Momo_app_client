@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   MDBBtn,
   MDBContainer,
@@ -8,7 +9,6 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import Form from "react-bootstrap/Form";
-import { useState } from "react";
 import AuthAPI from "../../../API/AuthAPI";
 import { Label } from "reactstrap";
 import { useForm, Controller } from "react-hook-form";
@@ -19,7 +19,9 @@ const Register = () => {
     control,
     formState: { errors },
     handleSubmit,
-  } = useForm({ mode: "all" });
+  } = useForm({
+    mode: "all",
+  });
   const [redirect, setRedirect] = useState(false);
   const [isErrorEmail, setIsErrorEmail] = useState(false);
 
@@ -72,9 +74,7 @@ const Register = () => {
                       <MDBInput size="lg" onChange={onChange} value={value} />
                     )}
                   />
-                  {errors.fullName && (
-                    <p style={{ color: "red" }}>{errors?.fullName.message}</p>
-                  )}
+                  {errors.fullName && <p style={{ color: "red" }}>Tét</p>}
 
                   <Label>Email</Label>
                   <Controller
