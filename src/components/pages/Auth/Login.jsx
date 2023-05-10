@@ -137,30 +137,6 @@ const Login = () => {
                   <p>Forgot password?</p>
                 </Link>
                 <hr className="my-4" />
-                <MDBBtn
-                  className="mb-2 w-100"
-                  size="lg"
-                  style={{
-                    backgroundColor: "#dd4b39",
-                    border: "none",
-                    height: "3.5rem",
-                  }}
-                >
-                  <MDBIcon fab icon="google" className="mx-2" />
-                  Sign in with google
-                </MDBBtn>
-                <MDBBtn
-                  className="mb-2 w-100"
-                  size="lg"
-                  style={{
-                    backgroundColor: "#3b5998",
-                    border: "none",
-                    height: "3.5rem",
-                  }}
-                >
-                  <MDBIcon fab icon="facebook-f" className="mx-2" />
-                  Sign in with facebook
-                </MDBBtn>
                 <p style={{ textAlign: "center" }}>
                   Not a member? &nbsp;
                   <Link
