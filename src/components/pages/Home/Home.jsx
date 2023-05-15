@@ -33,20 +33,26 @@ const Home = () => {
     fetchAll();
   }, []);
 
-  const listPostIds = posts.map((item) => {
-    return item._id;
-  });
+  const listPostIds =
+    posts &&
+    posts.length > 0 &&
+    posts.map((item) => {
+      return item._id;
+    });
   // Đếm số lượt quyên góp, số tiền theo post_id
-  const count = listPostIds.map((item) => {
-    return {
-      id: item,
-      donations: donations.filter((donation) => donation.post_id._id === item)
-        .length,
-      amount: donations
-        .filter((donation) => donation.post_id._id === item)
-        .map((data) => data.amount),
-    };
-  });
+  const count =
+    posts &&
+    posts.length > 0 &&
+    listPostIds.map((item) => {
+      return {
+        id: item,
+        donations: donations.filter((donation) => donation.post_id._id === item)
+          .length,
+        amount: donations
+          .filter((donation) => donation.post_id._id === item)
+          .map((data) => data.amount),
+      };
+    });
 
   return (
     <div className="home">

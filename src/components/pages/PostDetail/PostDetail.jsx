@@ -66,9 +66,12 @@ const PostDetail = () => {
   const diffTime = endDate - now;
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  const donationDetail = donations.filter((item) => {
-    return item.post_id._id === post._id;
-  });
+  const donationDetail =
+    donations &&
+    donations.length > 0 &&
+    donations.filter((item) => {
+      return item.post_id._id === post._id;
+    });
 
   const postsDifferentID = posts.filter((item) => item._id !== id);
   const onePost = postsDifferentID.slice(0, 1);
