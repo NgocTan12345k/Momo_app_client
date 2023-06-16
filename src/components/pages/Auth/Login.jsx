@@ -26,6 +26,7 @@ const Login = () => {
   const [isErrorEmail, setIsErrorEmail] = useState(false);
   const [isErrorPassword, setIsErrorPassword] = useState(false);
   const [redirect, setRedirect] = useState(false);
+  const [isErrorConfirmEmail, setIsErrorConfirmEmail] = useState(false);
 
   const handleSubmitForm = (data) => {
     const formData = {
@@ -51,6 +52,12 @@ const Login = () => {
           } else if (error.response.data.message === "wrong password") {
             setIsErrorEmail(false);
             setIsErrorPassword(true);
+          } else if (
+            error.response.data.message ===
+            "Please confirm your email to login!"
+          ) {
+            setIsErrorEmail(false);
+            setIsErrorConfirmEmail(true);
           }
         });
     };
@@ -93,7 +100,11 @@ const Login = () => {
                   </p>
                 )}
                 {isErrorEmail && <p style={{ color: "red" }}>Wrong Email</p>}
-
+                {isErrorConfirmEmail && (
+                  <p style={{ color: "red" }}>
+                    Please confirm your email to login!
+                  </p>
+                )}
                 <Label>Password</Label>
                 <Controller
                   name="password"
